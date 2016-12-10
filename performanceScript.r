@@ -2,8 +2,9 @@ setwd("S:/Users/Dean's PC/workspace/EAA_CA2")
 
 performanceData <- read.table("results.dat", header=TRUE)
 
+T <- 10
 UI <- (100-performanceData$IDLE)
-X0 <- (performanceData$CO/10)
+X0 <- (performanceData$CO/T)
 Di <- (UI / X0)
 R <- (performanceData$N / X0)
 
