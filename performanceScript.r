@@ -1,6 +1,5 @@
 #Sets working directory to location of relevant files
-setwd("S:/Users/Dean's PC/workspace/EAA_CA2")
-
+setwd(dirname(parent.frame(2)$ofile))
 #reads result.dat into a table variable, taking into account the header of the file
 performanceData <- read.table("results.dat", header=TRUE)
 
