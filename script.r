@@ -25,10 +25,15 @@ dev.new()
 plot(UI, pch=20, main="Utilisation (UI)", xlab="Number of Users (N)", ylab="Utilisation (%)", col=ifelse(UI >= 90, "red3", ifelse(UI <= 30, "green4", "gold3")))
 
 dev.new()
-plot(DI, pch=20, main="Service Demand (Di)", xlab="Number of Users (N)", ylab="Average time spent obtaining service" , col="dodgerblue4")
+plot(DI, pch=20, main="Service Demand (Di)", xlab="Number of Users (N)", ylab="Time spent obtaining service (DI)" , col="dodgerblue4")
 
 dev.new()
-plot(XO, pch=20, main="Throughput (XO)", xlab="Number of Users (N)", ylab="Transactions per second" , col="green4",)
+plot(XO, pch=20, main="Throughput (XO)", xlab="Number of Users (N)", ylab="Transactions per second (XO)" , col="green4",)
 
 dev.new()
-plot(R, pch=20, main="Response Time (R)", xlab="Number of Users (N)", ylab="Seconds" , col=ifelse(R >= 0.9, "red3", ifelse(R <= 0.3, "green4", "gold3")))
+plot(R, pch=20, main="Response Time (R)", xlab="Number of Users (N)", ylab="Response Time in Seconds (R)" , col=ifelse(R >= 0.9, "red3", ifelse(R <= 0.3, "green4", "gold3")))
+
+summary(UI)
+summary(DI)
+summary(XO)
+summary(R)
