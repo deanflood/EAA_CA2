@@ -29,6 +29,9 @@ plot(DI, pch=20, main="Service Demand (Di)", xlab="Number of Users (N)", ylab="T
 
 dev.new()
 plot(XO, pch=20, main="Throughput (XO)", xlab="Number of Users (N)", ylab="Transactions per second (XO)" , col="green4",)
+maxThroughput <- summary(XO)["Max."]
+abline(h=maxThroughput,col="gray73",lty=2)
+text(x=10, y=maxThroughput, labels="Max Throughput", col='coral4')
 
 dev.new()
 plot(R, pch=20, main="Response Time (R)", xlab="Number of Users (N)", ylab="Response Time in Seconds (R)" , col=ifelse(R >= 0.9, "red3", ifelse(R <= 0.3, "green4", "gold3")))
